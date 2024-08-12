@@ -22,7 +22,7 @@ export const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
 
   return (
     <Box height="100vh">
-      <AppBar position="fixed" sx={{ backgroundColor: 'green' }}>
+      <AppBar position="fixed" sx={{ backgroundColor: 'rgba(52,52,52,0.8)' }}>
         <Toolbar>
           <Box flexGrow={1}>
             <AnchorLink href={`#${SectionIdEnum.intro}`} offset={isSmall ? '56px' : '64px'} className="all_unset">

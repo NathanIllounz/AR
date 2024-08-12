@@ -77,7 +77,7 @@ export const Navigation: React.FC<NavigationProps> = ({ isSmall }) => {
             },
           }}
         >
-          <AppBar position="static" sx={{ background: 'green', color: 'white' }}>
+          <AppBar position="static" sx={{ color: 'white' }}>
             <Toolbar>
               <Typography variant="h5" sx={{ flexGrow: 1 }}>
                 Menu

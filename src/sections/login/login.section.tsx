@@ -1,7 +1,5 @@
 import React, { useState, ChangeEvent, FormEvent } from "react";
-// interface LoginProps {
-//   onFormSwitch: (formName: string) => void;
-// }
+import { Box, Typography } from "@mui/material";
 
 export const LoginSection: React.FC = () => {
   const [email, setEmail] = useState<string>('');
@@ -21,34 +19,40 @@ export const LoginSection: React.FC = () => {
   };
 
   return (
-    <div className="auth-form-container">
-      <form className="login-form" onSubmit={handleSubmit}>
-        <h1>Login</h1>
-        <label htmlFor="email">
-          Enter your Email
-          <input
-          value={email}
-          onChange={handleEmailChange}
-          type="email"
-          placeholder="youremail@gmail.com"
-          id="email"
-          name="email"
-        />
-        </label>
+    <Box py={2}>
+      <div className="auth-form-container">
+        <form className="login-form" onSubmit={handleSubmit}>
+          <Typography variant="h2" mb={5} fontWeight={700}>
+            Login
+          </Typography>
 
-        <label htmlFor="password">
-          Enter your Password
-          <input
-          value={pass}
-          onChange={handlePassChange}
-          type="password"
-          placeholder="********"
-          id="password"
-          name="password"
-        />
-        </label>
-        <button type="submit">Log In</button>
-      </form>
-    </div>
+          <label htmlFor="email">
+            Enter your Email
+            <input
+              value={email}
+              onChange={handleEmailChange}
+              type="email"
+              placeholder="youremail@gmail.com"
+              id="email"
+              name="email"
+            />
+          </label>
+
+          <label htmlFor="password">
+            Enter your Password
+            <input
+              value={pass}
+              onChange={handlePassChange}
+              type="password"
+              placeholder="********"
+              id="password"
+              name="password"
+            />
+          </label>
+
+          <button type="submit">Log In</button>
+        </form>
+      </div>
+    </Box>
   );
 };
